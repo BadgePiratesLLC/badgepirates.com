@@ -1,9 +1,15 @@
 version: '3'
 services:
+  frontend:
+    build: ./frontend
+    image: registry.gitlab.com/patrickrb/badgepirates.com
+    ports:
+      - "80:80"
   mongo:
     image: mongo:3.6
-  web:
-    build: .
+
+  backend:
+    build: ./backend
     image: registry.gitlab.com/patrickrb/badgepirates-backend
     ports:
      - "8080:8080"

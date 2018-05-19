@@ -47,6 +47,6 @@ export class OrderComponent implements OnInit {
 
   sendPost(token) {
     let body = JSON.stringify(token);
-    return this.http.post('http://localhost:8080/api/order', body, httpOptions);
+    return this.http.post('https://api.badgepirates.com/api/order', body, httpOptions);
   }
 }
