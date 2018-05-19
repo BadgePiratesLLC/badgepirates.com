@@ -1,0 +1,7 @@
+version: '3'
+services:
+  badgepirates:
+    build: .
+    image: registry.gitlab.com/patrickrb/badgepirates
+    ports:
+      - "80:80"

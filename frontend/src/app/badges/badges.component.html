@@ -1,0 +1,132 @@
+<!--====== WORK AREA ======-->
+<div id="badges" class="work-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="section-title">
+                   <h2>badges.</h2>
+                   <p>Here's some of our recent work</p>
+               </div>
+            </div>
+        </div> <!--/.row-->
+
+        <div class="row">
+            <ul class="work-list text-center">
+                <li class="filter" data-filter="all">all</li>
+                <li class="filter" data-filter=".defcon">defcon</li>
+                <li class="filter" data-filter=".bsides">bsides</li>
+                <li class="filter" data-filter=".seckc">SecKC</li>
+            </ul>
+        </div> <!--/.row-->
+
+        <div class="work-inner">
+            <div class="row">
+              <div class="col-md-4 col-sm-6 col-xs-12 mix seckc defcon"> <!-- Single Work -->
+                  <div class="single-work">
+                      <img src="assets/img/badges/defcon/26/SecKCDC26_P_FZ_700x466.png" alt="">
+                      <div class="item-hover">
+                          <div class="work-table">
+                              <div class="work-tablecell">
+                                  <div class="hover-content">
+                                      <h4>SecKC Defcon 26</h4>
+                                      <a href="#" class="work-link" data-toggle="modal" data-target="#badge-1"><i class="fa fa-link"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 mix seckc"> <!-- Single Work -->
+                    <div class="single-work">
+                        <img src="assets/img/badges/seckc/speaker/2018/SecKCSpeaker_Front_700x466.png" alt="">
+                        <div class="item-hover">
+                            <div class="work-table">
+                                <div class="work-tablecell">
+                                    <div class="hover-content">
+                                        <h4>SecKC Speaker Badge</h4>
+                                        <a href="#" class="work-link" data-toggle="modal" data-target="#badge-2"><i class="fa fa-link"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              <div class="col-md-4 col-sm-6 col-xs-12 mix bsides"> <!-- Single Work -->
+                  <div class="single-work">
+                      <img src="assets/img/badges/bsides/2018/BSides2018_All_2_700x467.png" alt="">
+                      <div class="item-hover">
+                          <div class="work-table">
+                              <div class="work-tablecell">
+                                  <div class="hover-content">
+                                      <h4>BSides KC 2018</h4>
+                                      <a href="#" class="work-link" data-toggle="modal" data-target="#badge-3"><i class="fa fa-link"></i></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12 mix seckc defcon"> <!-- Single Work -->
+                  <div class="single-work">
+                    <img src="assets/img/badges/defcon/25/Founder.jpg" alt="">
+                    <div class="item-hover">
+                      <div class="work-table">
+                        <div class="work-tablecell">
+                          <div class="hover-content">
+                              <h4>SecKC Defcon 25</h4>
+                              <a href="#" class="work-link" data-toggle="modal" data-target="#badge-4"><i class="fa fa-link"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12 mix branding"> <!-- Single Work -->
+                      <div class="single-work">
+                          <img src="assets/img/TS1.png" alt="">
+                          <div class="item-hover">
+                              <div class="work-table">
+                                  <div class="work-tablecell">
+                                      <div class="hover-content">
+                                          <h4>More info coming soon...</h4>
+                                          <a href="#" class="work-link" data-toggle="modal" data-target="#badge-5"><i class="fa fa-link"></i></a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                <div class="col-md-12">
+                    <!-- Work Modal One  -->
+                    <div *ngFor="let badge of badges"  tabindex="0" class="modal fade" id="badge-{{badge.id}}">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title">Badge Overview</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="assets/img/{{badge.bigImage}}" alt="work-1">
+                                    <h3>{{badge.name}}</h3>
+                                    <p>{{badge.description}}</p>
+                                    <h4 *ngIf="badge.features.length" class="modal-section-header">Features:</h4>
+                                    <ul class="list-styled feature-list" >
+                                      <li *ngFor="let feature of badge.features">{{feature}}</li>
+                                    </ul>
+                                    <h4 *ngIf="badge.links.length" class="modal-section-header">Links:</h4>
+                                    <ul class="list-styled project-list" >
+                                        <li *ngFor="let link of badge.links"><a href="{{link.linkUrl}}" target="_blank">{{link.linkText}}</a></li>
+                                    </ul>
+                              </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal-dialog -->
+                    </div><!-- /.modal -->
+                    <!-- End Work Modal  -->
+
+                 </div>
+            </div> <!--/.row-->
+        </div>
+    </div><!--/.container-->
+</div>
+<!--====== END WORK AREA ======-->

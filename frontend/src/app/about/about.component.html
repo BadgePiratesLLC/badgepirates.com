@@ -1,0 +1,147 @@
+<!--===== ABOUT AREA =====-->
+<div id="about" class="about-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+               <div class="author-image">
+                    <img src="assets/img/AboutUsImage.png" alt="Author Image"> <!--=== about image ===-->
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="tab" role="tabpanel">
+                    <ul class="nav nav-tabs" role="tablist"> <!-- Nav tabs -->
+                        <li role="presentation" class="active"><a href="#Section1" role="tab" data-toggle="tab">about</a></li>
+                        <li role="presentation"><a href="#Section2" role="tab" data-toggle="tab">team</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active" id="Section1"> <!-- Single Tab -->
+                           <h4 class="about-heading">We're a small group of <span>hackers</span> & <span>makers</span></h4>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.</p>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <ul class="social-links"> <!--=== social-links ===-->
+                                <li><a href="https://twitter.com/BadgePirates"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://github.com/BadgePiratesLLC"><i class="fa fa-github"></i></a></li>
+                            </ul>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="Section2"> <!-- Single Tab -->
+                          <div class="work-inner">
+                              <div class="row">
+                                  <div class="col-md-4 col-sm-6 col-xs-12 mix medias"> <!-- Single Work -->
+                                      <div class="single-work">
+                                          <img src="assets/img/OutTeamImage.png" alt="">
+                                          <div class="item-hover">
+                                              <div class="work-table">
+                                                  <div class="work-tablecell">
+                                                      <div class="hover-content">
+                                                          <h4>fg</h4>
+                                                          <a href="#" class="work-link" data-toggle="modal" data-target="#hacker-1"><i class="fa fa-link"></i></a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                                  <div class="col-md-4 col-sm-6 col-xs-12 mix medias"> <!-- Single Work -->
+                                      <div class="single-work">
+                                          <img src="assets/img/OutTeamImage.png" alt="">
+                                          <div class="item-hover">
+                                              <div class="work-table">
+                                                  <div class="work-tablecell">
+                                                      <div class="hover-content">
+                                                          <h4>rixon</h4>
+                                                          <a href="#" class="work-link" data-toggle="modal" data-target="#hacker-2"><i class="fa fa-link"></i></a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                                  <div class="col-md-4 col-sm-6 col-xs-12 mix medias"> <!-- Single Work -->
+                                      <div class="single-work">
+                                          <img src="assets/img/OutTeamImage.png" alt="">
+                                          <div class="item-hover">
+                                              <div class="work-table">
+                                                  <div class="work-tablecell">
+                                                      <div class="hover-content">
+                                                          <h4>networkgeek</h4>
+                                                          <a href="#" class="work-link" data-toggle="modal" data-target="#hacker-3"><i class="fa fa-link"></i></a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                                  <div class="col-md-4 col-sm-6 col-xs-12 mix medias"> <!-- Single Work -->
+                                      <div class="single-work">
+                                          <img src="assets/img/hackers/thumbs/jigglebilly.jpeg" alt="">
+                                          <div class="item-hover">
+                                              <div class="work-table">
+                                                  <div class="work-tablecell">
+                                                      <div class="hover-content">
+                                                          <h4>jigglebilly</h4>
+                                                          <a href="#" class="work-link" data-toggle="modal" data-target="#hacker-4"><i class="fa fa-link"></i></a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+
+
+                                  <div class="col-md-4 col-sm-6 col-xs-12 mix medias"> <!-- Single Work -->
+                                      <div class="single-work">
+                                          <img src="assets/img/OutTeamImage.png" alt="">
+                                          <div class="item-hover">
+                                              <div class="work-table">
+                                                  <div class="work-tablecell">
+                                                      <div class="hover-content">
+                                                          <h4>pecord</h4>
+                                                          <a href="#" class="work-link" data-toggle="modal" data-target="#hacker-5"><i class="fa fa-link"></i></a>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div> <!--/.row-->
+                          </div>
+                          <div class="col-md-12">
+                            <div *ngFor="let hacker of hackers">
+                              <!-- Work Modal One  -->
+                              <div  tabindex="0" class="modal fade" id="hacker-{{hacker.id}}">
+                                  <div class="modal-dialog">
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                              <h4 class="modal-title">Hacker Overview</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                              <img src="assets/img/{{hacker.bigImage}}" alt="work-1">
+                                              <h3>{{hacker.name}}</h3>
+                                              <p>{{hacker.description}}</p>
+                                               <ul class="list-unstyled project-list" >
+                                                  <li *ngIf="hacker.website"><label>Personal Site: </label> <a href="{{hacker.website}}" target="_blank">{{hacker.website}}</a></li>
+                                              </ul>
+                                        </div>
+                                      </div><!-- /.modal-content -->
+                                  </div><!-- /.modal-dialog -->
+                              </div><!-- /.modal -->
+                              <!-- End Work Modal  -->
+                            </div>
+                              <!-- End Work Modal  -->
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--/.row-->
+    </div> <!--/.container-->
+</div>
+<!--===== END ABOUT AREA =====-->
