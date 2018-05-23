@@ -21,7 +21,7 @@ export class OrderComponent implements OnInit {
 
   openCheckout() {
     var handler = (<any>window).StripeCheckout.configure({
-      key: 'pk_test_bz3yFZFuDWdrI0MHSf9J6HhL',
+      key: 'pk_live_V9gLHpvtUlp4XdWjcJ8hJB9v',
       locale: 'auto',
       token: (token: any) => {
         // You can access the token ID with `token.id`.
@@ -36,7 +36,7 @@ export class OrderComponent implements OnInit {
     handler.open({
       name: 'BadgePirates LLC',
       description: 'SecKCDC26Badge',
-      amount: 3500,
+      amount: 4500,
       "billing-address": true,
       "zip-code": true,
       locale: "auto",
