@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { BadgesComponent } from './badges/badges.component';
 import { ContactComponent } from './contact/contact.component'
 import { FooterComponent } from './footer/footer.component'
+import { ThreejsAnimationComponent } from './threejs-animation/threejs-animation.component'
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FooterComponent } from './footer/footer.component'
     ContactComponent,
     FooterComponent,
     OrderComponent,
+    ThreejsAnimationComponent,
   ],
   imports: [
     BrowserModule,
