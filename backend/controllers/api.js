@@ -56,7 +56,7 @@ exports.orderBadge = (req, res, next) => {
   const token = req.body.id; // Using Express
 
   const charge = stripe.charges.create({
-    amount: 4500,
+    amount: 5500,
     currency: 'usd',
     description: 'Example charge',
     source: token,

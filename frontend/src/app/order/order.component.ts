@@ -36,7 +36,7 @@ export class OrderComponent implements OnInit {
     handler.open({
       name: 'BadgePirates LLC',
       description: 'SecKCDC26Badge',
-      amount: 4500,
+      amount: 5500,
       "billing-address": true,
       "zip-code": true,
       locale: "auto",
