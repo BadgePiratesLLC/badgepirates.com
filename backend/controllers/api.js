@@ -60,6 +60,7 @@ exports.orderBadge = (req, res, next) => {
     currency: 'usd',
     description: 'SecKC Defon 26 Badge',
     source: token,
+    receipt_email: req.body.email,
   });
 
   return res.json({"status": "success"}).end()
