@@ -25,7 +25,7 @@ export class ThreejsAnimationComponent implements AfterViewInit {
   private composer;
 
   //camera settings
-  public cameraPos = { x: -15, y: 0, z: 0 };
+  public cameraPos = { x: 15, y: 0, z: 0 };
   public fieldOfView: number = 25;
   public nearClippingPane: number = 1;
   public farClippingPane: number = 1000;

@@ -4,10 +4,22 @@ export const BADGES: Badge[] = [
   { id: 1,
     name: 'SecKC Defcon 26',
     thumb: 'badges/defcon/26/SecKCDC26_P_FZ_700x466.png',
-    description: 'SecKC DefCon 26 Electronic Badge. Coming soon...',
+    description: 'Platform: WROOM Esp32 (WiFi, BLE) on board with 42 Charlie Plex LED.  Learn to hack your badge with Hack My Badge Instructions: Adding a LIPO and charger, and the NeoPixel Bling Ring',
     bigImage: 'badges/defcon/26/SecKCDC26_P_B_700x466.png',
-    links:[],
-    features:[],
+    links:[{
+      id: 1,
+      linkText: 'WROOM ESP32 Document',
+      linkUrl: 'http://esp-idf.readthedocs.io/en/latest/hw-reference/modules-and-boards.html',
+
+    }],
+    features:[
+      'Several different LED patterns',
+      'Hackable with Attachable Daughter Board',
+      'FTDI connection using Arduino IDE',
+      '#BadgeLife Shitty Add-On Connector',
+      '2x AAA Battery',
+      'Components SMD 1206 and 0603 Foot Print'
+    ],
     tags: 'seckc defcon'
   },
   { id: 2,
