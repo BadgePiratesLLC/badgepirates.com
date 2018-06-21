@@ -40,7 +40,7 @@ exports.postContact = (req, res, next) => {
   console.log('req.body', req.body)
   sgMail.setApiKey(process.env.SENDGRID_KEY);
   const msg = {
-    to: 'burnsoft@gmail.com',
+    to: 'admin@badgepirates.com',
     from: req.body.email,
     subject: req.body.subject,
     text: req.body.message,
@@ -56,7 +56,7 @@ exports.orderBadge = (req, res, next) => {
   const token = req.body.id; // Using Express
 
   const charge = stripe.charges.create({
-    amount: 5500,
+    amount: 6500,
     currency: 'usd',
     description: 'SecKC Defon 26 Badge',
     source: token,
