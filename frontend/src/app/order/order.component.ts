@@ -12,8 +12,8 @@ const httpOptions = {
 })
 export class OrderComponent implements OnInit {
 
-  private badgeCount:any = "1"
-  private badgeDisplayTotal:any = "5"
+  public badgeCount:any = "1"
+  public badgeDisplayTotal:any = "5"
 
   constructor(private http: HttpClient) {
   }

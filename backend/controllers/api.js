@@ -61,7 +61,7 @@ exports.orderBadge = (req, res, next) => {
     currency: 'usd',
     description: req.body.badgeCount + ' badges for SecKC Defcon 26 VIP Party SAO',
     source: token,
-    receipt_email: req.body.email,
+    receipt_email: req.body.token.email,
   });
 
   return res.json({"status": "success"}).end()
