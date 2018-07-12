@@ -53,9 +53,8 @@ export class OrderComponent implements OnInit {
   }
 
   sendPost(token) {
-    let body:any = {}
-    body.token = JSON.stringify(token);
-    body.badgeCount = JSON.stringify(this.badgeCount)
+    let body = JSON.stringify(token);
+    body.badgeCount = this.badgeCount;
     return this.http.post('https://api.badgepirates.com/api/order', body, httpOptions);
   }
 }

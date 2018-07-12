@@ -53,7 +53,7 @@ exports.orderBadge = (req, res, next) => {
   console.log('req.body', req.body)
   // Token is created using Checkout or Elements!
   // Get the payment token ID submitted by the form:
-  const token = req.body.token.id; // Using Express
+  const token = req.body.id; // Using Express
 
 
   const charge = stripe.charges.create({
@@ -61,7 +61,7 @@ exports.orderBadge = (req, res, next) => {
     currency: 'usd',
     description: req.body.badgeCount + ' badges for SecKC Defcon 26 VIP Party SAO',
     source: token,
-    receipt_email: req.body.token.email,
+    receipt_email: req.body.email,
   });
 
   return res.json({"status": "success"}).end()
