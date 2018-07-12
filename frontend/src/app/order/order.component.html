@@ -18,21 +18,31 @@
 
             <div class="col-md-7">
               <div class="tab-content">
-                 <h4 class="about-heading">A limited edition, VIP token for SecKC the World, he official DEFCON <strong>SecKC</strong> party.</h4>
-                 <p>Put this on any of the DEFCON badges or throw it on a lanyard
-                 by itself.</p>
-                 <p><b>Pickup at DEFCON with your receipt. SecKC members who cannot attend DEFCON can pickup at the
-                 August SecKC meeting.</b></p>
+                <div class="row">
+                   <h4 class="about-heading">A limited edition, VIP token for SecKC the World, he official DEFCON <strong>SecKC</strong> party.</h4>
+                   <p>Put this on any of the DEFCON badges or throw it on a lanyard
+                   by itself.</p>
+                   <p><b>Pickup at DEFCON with your receipt. SecKC members who cannot attend DEFCON can pickup at the
+                   August SecKC meeting.</b></p>
 
-                 <p>$5 gets you:</p>
-                 <ul>
-                   <li>One VIP shitty add on</li>
-                   <li>At least one SecKC shot</li>
-                   <li>Access to secret party surprises</li>
-                 </ul>
+                   <p>$5 gets you:</p>
+                   <ul>
+                     <li>One VIP shitty add on</li>
+                     <li>At least one SecKC shot</li>
+                     <li>Access to secret party surprises</li>
+                   </ul>
 
-                <p>Photo Credit: Myung Kang</p>
-                <button class="btn btn-effect btn-sent" (click)="openCheckout()">$5 Order Now!</button>
+                  <p>Photo Credit: Myung Kang</p>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <label for="badgeCount">Num Badges: </label>
+                    <input class="badge-count-input" #badgeCount (keyup)="updateBadgeCount(badgeCount.value); "  value="1" type="input" required>
+                  </div>
+                  <div class="col-sm-8">
+                    <button class="btn btn-effect btn-sent" (click)="openCheckout()">${{this.badgeDisplayTotal}} Order Now!</button>
+                  </div>
+                </div>
               </div>
             </div>
         </div> <!--/.row-->

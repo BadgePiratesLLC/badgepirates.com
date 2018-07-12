@@ -8,15 +8,22 @@ const httpOptions = {
 @Component({
   selector: 'app-order',
   templateUrl: './order.component.html',
+  styleUrls: ['./order.less'],
 })
 export class OrderComponent implements OnInit {
 
-
+  private badgeCount:any = "1"
+  private badgeDisplayTotal:any = "5"
 
   constructor(private http: HttpClient) {
   }
 
   ngOnInit() {
+  }
+
+  updateBadgeCount(data) {
+    this.badgeCount = data
+    this.badgeDisplayTotal = data * 5
   }
 
   openCheckout() {
@@ -36,7 +43,7 @@ export class OrderComponent implements OnInit {
     handler.open({
       name: 'BadgePirates LLC',
       description: 'SecKC Defcon 26 VIP Party SAO',
-      amount: 500,
+      amount: this.badgeCount * 500,
       "billing-address": true,
       "zip-code": true,
       locale: "auto",
@@ -46,7 +53,9 @@ export class OrderComponent implements OnInit {
   }
 
   sendPost(token) {
-    let body = JSON.stringify(token);
+    let body:any = {}
+    body.token = JSON.stringify(token);
+    body.badgeCount = JSON.stringify(this.badgeCount)
     return this.http.post('https://api.badgepirates.com/api/order', body, httpOptions);
   }
 }
