@@ -56,9 +56,9 @@ exports.orderBadge = (req, res, next) => {
   const token = req.body.id; // Using Express
 
   const charge = stripe.charges.create({
-    amount: 6500,
+    amount: 500,
     currency: 'usd',
-    description: 'SecKC Defon 26 Badge',
+    description: 'SecKC Defcon 26 VIP Party SAO',
     source: token,
     receipt_email: req.body.email,
   });

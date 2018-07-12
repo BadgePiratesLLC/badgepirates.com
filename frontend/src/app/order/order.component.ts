@@ -35,12 +35,12 @@ export class OrderComponent implements OnInit {
 
     handler.open({
       name: 'BadgePirates LLC',
-      description: 'SecKCDC26Badge',
-      amount: 6500,
+      description: 'SecKC Defcon 26 VIP Party SAO',
+      amount: 500,
       "billing-address": true,
       "zip-code": true,
       locale: "auto",
-      image: "https://stripe.com/img/documentation/checkout/marketplace.png"
+      image: "https://stripe.com/img/documentation/checkout/BPSkull.png"
     });
 
   }
