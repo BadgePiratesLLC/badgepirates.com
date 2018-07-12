@@ -37,7 +37,7 @@
                 <div class="row">
                   <div class="col-sm-4">
                     <label for="badgeCount">Num Badges: </label>
-                    <input class="badge-count-input" #badgeCount (keyup)="updateBadgeCount(badgeCount.value); "  value="1" type="input" required>
+                    <input type="number" min="1" max="999" class="badge-count-input" #badgeCount (keyup)="updateBadgeCount(badgeCount.value); "  value="1" required>
                   </div>
                   <div class="col-sm-8">
                     <button class="btn btn-effect btn-sent" (click)="openCheckout()">${{this.badgeDisplayTotal}} Order Now!</button>
