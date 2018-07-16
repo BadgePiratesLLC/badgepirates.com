@@ -57,7 +57,7 @@ exports.orderBadge = (req, res, next) => {
 
 
   const charge = stripe.charges.create({
-    amount: req.body.badgeCount * 500,
+    amount: req.body.badgeCount * 1000,
     currency: 'usd',
     description: req.body.badgeCount + ' badges for SecKC Defcon 26 VIP Party SAO',
     source: token,

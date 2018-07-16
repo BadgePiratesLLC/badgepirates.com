@@ -13,7 +13,7 @@ const httpOptions = {
 export class OrderComponent implements OnInit {
 
   public badgeCount:any = "1"
-  public badgeDisplayTotal:any = "5"
+  public badgeDisplayTotal:any = "10"
 
   constructor(private http: HttpClient) {
   }
@@ -23,7 +23,7 @@ export class OrderComponent implements OnInit {
 
   updateBadgeCount(data) {
     this.badgeCount = data
-    this.badgeDisplayTotal = data * 5
+    this.badgeDisplayTotal = data * 10
   }
 
   openCheckout() {
@@ -43,7 +43,7 @@ export class OrderComponent implements OnInit {
     handler.open({
       name: 'BadgePirates LLC',
       description: 'SecKC Defcon 26 VIP Party SAO',
-      amount: this.badgeCount * 500,
+      amount: this.badgeCount * 1000,
       "billing-address": true,
       "zip-code": true,
       locale: "auto",
