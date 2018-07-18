@@ -57,9 +57,27 @@ exports.orderBadge = (req, res, next) => {
 
 
   const charge = stripe.charges.create({
+    amount: req.body.badgeCount * 6500,
+    currency: 'usd',
+    description: req.body.badgeCount + 'x SecKC Defon 26 Badge',
+    source: token,
+    receipt_email: req.body.email,
+  });
+
+  return res.json({"status": "success"}).end()
+}
+
+exports.orderSAOBadge = (req, res, next) => {
+  console.log('req.body', req.body)
+  // Token is created using Checkout or Elements!
+  // Get the payment token ID submitted by the form:
+  const token = req.body.id; // Using Express
+
+
+  const charge = stripe.charges.create({
     amount: req.body.badgeCount * 1000,
     currency: 'usd',
-    description: req.body.badgeCount + ' badges for SecKC Defcon 26 VIP Party SAO',
+    description: req.body.badgeCount + 'x badges for SecKC Defcon 26 VIP Party SAO',
     source: token,
     receipt_email: req.body.email,
   });

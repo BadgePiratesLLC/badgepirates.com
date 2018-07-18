@@ -142,7 +142,8 @@ app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userControl
  */
 app.get('/api', apiController.getApi);
 app.post('/api/contact', apiController.postContact)
-app.post('/api/order', apiController.orderBadge)
+app.post('/api/order-badge', apiController.orderBadge)
+app.post('/api/order-sao', apiController.orderSAOBadge)
 app.get('/api/lastfm', apiController.getLastfm);
 app.get('/api/nyt', apiController.getNewYorkTimes);
 app.get('/api/aviary', apiController.getAviary);
