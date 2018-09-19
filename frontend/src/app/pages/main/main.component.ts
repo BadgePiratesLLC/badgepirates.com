@@ -1,11 +1,9 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'pages',
   encapsulation: ViewEncapsulation.None,
-  styles: [],
-  template: require('./main.html')
+  templateUrl: './main.component.html'
 })
 export class MainComponent {
 
