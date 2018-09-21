@@ -53,7 +53,7 @@ exports.orderBadge = (req, res, next) => {
   console.log('req.body', req.body)
   // Token is created using Checkout or Elements!
   // Get the payment token ID submitted by the form:
-  // const token = req.body.id; // Using Express
+  const token = req.body.id; // Using Express
   //
   //
   // const charge = stripe.charges.create({
